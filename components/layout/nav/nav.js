@@ -7,11 +7,11 @@ const Nav = ({ active, setActive }) => {
 
   return (
     <div
-      className={`relative overflow-hidden h-screen before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-30 before:top-0 before:z-10`}
+      className={`relative overflow-hidden h-screen before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-60 before:top-0 before:z-10`}
       style={router.route === "/" ? { height: "85vh" } : { height: "40vh" }}
     >
       <video
-        src="/header.mov"
+        src="/header-1920-nosound.mp4"
         muted
         autoPlay
         loop
