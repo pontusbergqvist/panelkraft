@@ -11,7 +11,7 @@ export default function Home() {
         <h2 className="tracking-wide text-h2 mb-14">Så här jobbar vi</h2>
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-5 place-content-center px-2 tablet:px-6 text-center tablet:text-left text-black">
           <div>
-            <p>01.</p>
+            <p>02.</p>
             <h3 className="text-h3 mb-2">Intresseanmäl</h3>
             <p className="text-[#222]">
               Börja med att kontakta oss så berättar vi om möjligheterna hos
