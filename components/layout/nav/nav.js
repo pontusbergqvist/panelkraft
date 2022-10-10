@@ -12,7 +12,7 @@ const Nav = ({ active, setActive }) => {
       }`}
     >
       <video
-        src="/header.mp4"
+        src="/panelkraft.mov"
         muted
         autoPlay
         loop
