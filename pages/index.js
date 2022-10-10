@@ -8,54 +8,50 @@ export default function Home() {
           Vår process
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
-        <h2 className="tracking-wide text-h2 mb-14">Från start till mål</h2>
+        <h2 className="tracking-wide text-h2 mb-14">
+          Hur vi jobbar på Panelkraft
+        </h2>
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-10 place-content-center px-2 tablet:px-6 text-center tablet:text-left justify-center text-black">
           <div>
-            <p>01.</p>
             <h3 className="text-h3 mb-2">Visa ditt intresse</h3>
             <p className="text-[#222]">
               Kom i kontakt med oss via formuläret här på hemsidan. Efter du
-              fyllt i dina uppgifter kommer du att bli kontaktad utav oss. I
-              detta stadium fångar vi upp grundläggande underlag och gör en
-              förstudie av möjligheterna hos just er.
+              fyllt i dina uppgifter kommer vi att kontakta dig. Vi fångar upp
+              grundläggande underlag och gör en förstudie av möjligheterna hos
+              just er.
             </p>
           </div>
           <div>
-            <p>02.</p>
             <h3 className="text-h3 mb-2">Boka ett möte</h3>
             <p className="text-[#222]">
-              Det finns många olika faktorer som spelar in för att en
-              solcellsinstallation skall bli lyckad. Varje plats är unik och det
-              krävs ett verkligt möte för att bedöma möjligheterna och ta fram
-              ett skarpt anbud. I detta stadium bokar vi in ett kostnadsfritt
-              platsbesök för att kunna räkna skarpt samt besvara eventuella
-              frågor och funderingar som ni har.
+              Varje plats är unik och det krävs ett verkligt möte för att bedöma
+              möjligheterna och ta fram ett skarpt anbud. I detta skede bokar vi
+              in ett kostnadsfritt platsbesök.
             </p>
           </div>
           <div>
-            <p>03.</p>
             <h3 className="text-h3 mb-2">Installation</h3>
             <p className="text-[#222]">
-              Nu börjar det roliga! Vi sköter hela processen från start till
-              mål. Våra behöriga elektriker och montörer kommer att genomföra
-              installationen noggrant, snyggt men framför allt <span className="underline">säkert</span>.
+              Vi sköter hela processen från start till mål. Våra behöriga
+              elektriker och montörer kommer att genomföra installationen
+              noggrant, snyggt men framför allt{" "}
+              <span className="underline">säkert</span>.
             </p>
           </div>
           <div>
-            <p>04.</p>
-            <h3 className="text-h3 mb-2">Installation</h3>
+            <h3 className="text-h3 mb-2">Driftsättning</h3>
             <p className="text-[#222]">
-            Efter avslutat arbete tar vi ett möte tillsammans med er för att gå igenom
-anläggningen innan vi driftsätter, samt överlämna slutdokumentation.
+              Efter avslutat arbete tar vi ett möte tillsammans med er för att
+              gå igenom anläggningen innan vi driftsätter, samt överlämna
+              slutdokumentation.
             </p>
           </div>
           <div>
-            <p>05.</p>
-            <h3 className="text-h3 mb-2">Installation</h3>
+            <h3 className="text-h3 mb-2">Uppföljning</h3>
             <p className="text-[#222]">
-            Vi jobbar ständigt med att kvalitetssäkra våra installationer och det är viktigt för oss
-att du som kund känner dig nöjd och delaktig hela vägen. Uppföljning är en naturlig
-del av processen hos oss.
+              Vi jobbar ständigt med att kvalitetssäkra våra installationer och
+              det är viktigt för oss att du som kund känner dig nöjd och
+              delaktig hela vägen.
             </p>
           </div>
         </section>
@@ -105,11 +101,12 @@ del av processen hos oss.
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
         <h2 className="tracking-wide text-h2 mb-4">
-        Vi levererar mer än bara solceller!
+          Vi levererar mer än bara solceller!
         </h2>
         <p className="max-w-[700px] mx-auto mb-16 text-[#333]">
-        Kanske önskar ni komplettera er anläggning med ett batteri och elbilsladdare? Vi jobbar
-alltid med kvalitativa och välbeprövade produkter. Nedan följer exempel på vanliga tillval.
+          Kanske önskar ni komplettera er anläggning med ett batteri och
+          elbilsladdare? Vi jobbar alltid med kvalitativa och välbeprövade
+          produkter. Nedan följer exempel på vanliga tillval.
         </p>
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))]  place-content-center gap-5 gap-y-12">
           <div className="tablet:text-left">
@@ -120,9 +117,9 @@ alltid med kvalitativa och välbeprövade produkter. Nedan följer exempel på v
             />
             <h3 className="text-h3 my-3">Tankar på elbil?</h3>
             <p className="text-[#333]">
-            Givetvis kan våra elektriker även installera en eller flera elbilsladdare i samband med att vi
-
-installerar er solcellsanläggning.
+              Givetvis kan våra elektriker även installera en eller flera
+              elbilsladdare i samband med att vi installerar er
+              solcellsanläggning.
             </p>
           </div>
           <div className="tablet:text-left">
@@ -133,10 +130,10 @@ installerar er solcellsanläggning.
             />
             <h3 className="text-h3 my-3">Lagra energi?</h3>
             <p className="text-[#333]">
-            Batteri börjar bli ett vanligt komplement till solceller idag!
-
-Vi konsulterar gärna och förklarar fördelarna med ett batteri och hur det fungerar.
-Något som vi kan komplettera er anläggning med om ni önskar!
+              Batteri börjar bli ett vanligt komplement till solceller idag! Vi
+              konsulterar gärna och förklarar fördelarna med ett batteri och hur
+              det fungerar. Något som vi kan komplettera er anläggning med om ni
+              önskar!
             </p>
           </div>
           <div className="tablet:text-left">
@@ -147,10 +144,10 @@ Något som vi kan komplettera er anläggning med om ni önskar!
             />
             <h3 className="text-h3 my-3">Typ av anläggning?</h3>
             <p className="text-[#333]">
-            Vi har kompetens och erfarenhet inom dem olika systemen och är anpassningsbara vad det
-gäller material. Vi lyssnar på era önskemål och lägger därefter fram förslag på anläggning
-
-som vi anser passar er bäst.
+              Vi har kompetens och erfarenhet inom dem olika systemen och är
+              anpassningsbara vad det gäller material. Vi lyssnar på era
+              önskemål och lägger därefter fram förslag på anläggning som vi
+              anser passar er bäst.
             </p>
           </div>
         </section>
@@ -202,12 +199,10 @@ som vi anser passar er bäst.
         className="text-center max-w-[1000px] w-full mx-auto p-2 mt-28 mb-10"
       >
         <p className="text-[#222] font-light tracking-widest mb-4 font-mono">
-          Intresseanmälan
+          Kontaktformulär
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
-        <h2 className="tracking-wide text-h2 mb-4">
-          Gör din intresseanmälan redan nu
-        </h2>
+        <h2 className="tracking-wide text-h2 mb-4">Vill du veta mer?</h2>
         <div className="max-w-[700px] w-full mx-auto my-4">
           <Form />
         </div>

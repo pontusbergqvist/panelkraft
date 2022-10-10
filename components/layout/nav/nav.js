@@ -59,7 +59,7 @@ const Nav = ({ active, setActive }) => {
         </div>
         <Link href="/#form">
           <button className="border-b-2 ml-10 text-left border-b-accent text-[16px] text-white drop-shadow tablet:block hidden">
-            Gör en intresseanmälan
+            Kontakt
           </button>
         </Link>
         <Hamburger active={active} setActive={setActive} />
@@ -82,7 +82,7 @@ const Nav = ({ active, setActive }) => {
           </p>
           <Link href="/#form">
             <button className="border text-white border-accent drop-shadow rounded p-2 px-3 hidden tablet:block">
-              Intresseanmälan
+              Kontakta oss
             </button>
           </Link>
         </div>

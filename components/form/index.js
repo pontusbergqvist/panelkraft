@@ -73,7 +73,7 @@ const Form = () => {
           ></textarea>
         </div>
         <button className="bg-accent text-black drop-shadow rounded p-2 px-3 mb-5">
-          Skicka anmälan
+          Skicka
         </button>
       </form>
     </div>

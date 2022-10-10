@@ -14,7 +14,7 @@ const Footer = () => {
                   className="w-full mb-5"
                 />
               </a>
-              <p>Din kundvänliga installatör av solceller i Västsverige.</p>
+              <p className="text-left">Vi levererar nyckelfärdiga installationer av solceller till villor, företag och lantbruksfastigheter.</p>
             </div>
             <div className="font-mono tracking-wider flex flex-col tablet:items-start items-center">
               <Link href="/">
