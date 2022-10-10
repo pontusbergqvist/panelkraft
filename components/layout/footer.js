@@ -14,33 +14,31 @@ const Footer = () => {
                   className="w-full mb-5"
                 />
               </a>
-              <p className="text-left">Vi levererar nyckelfärdiga installationer av solceller till villor, företag och lantbruksfastigheter.</p>
+              <p className="text-left">
+                Vi levererar nyckelfärdiga installationer av solceller till
+                villor, företag och lantbruksfastigheter.
+              </p>
             </div>
             <div className="font-mono tracking-wider flex flex-col tablet:items-start items-center">
               <Link href="/">
-                <a className="underline py-1">
-                  Hem
-                </a>
+                <a className="underline py-1">Hem</a>
               </Link>
               <Link href="/referenser">
-                <a className="underline py-1">
-                  Referenser
-                </a>
+                <a className="underline py-1">Referenser</a>
               </Link>
               {/* <p className="cursor-pointer underline py-1">Om oss</p> */}
             </div>
           </section>
           <section className="flex flex-col justify-between tablet:mt-0 mt-16 tablet:text-right text-center text-[14px]">
             <div>
-              <p>hej@soltjanst.se</p>
-              <p>031-36 35 780</p>
+              <p>info@panelkraft.nu</p>
+              <p>072 - 241 14 45</p>
             </div>
-            <p>Öppettider: 08-16</p>
             <div>
-              <p>Solklart AB</p>
+              <p>Panelkraft AB</p>
               <p>Jäxviken Skattegården 1</p>
               <p>438 95 Hällingsjö</p>
-              <p>Orgnr: 559022-4878</p>
+              <p>Orgnr: 559398-6705</p>
             </div>
           </section>
         </article>

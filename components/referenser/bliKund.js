@@ -44,11 +44,11 @@ const BliKund = () => {
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
         <p className="text-[23px] mt-3 font-light drop-shadow-xl">
-          Vill du också bli kund? Gör en intresseanmälan nedan!
+          Vill du också bli kund? Anmäl ditt intresse nedan!
         </p>
         <Link href="/#form">
           <button className="border mt-6 border-black drop-shadow rounded p-2 px-3">
-            Intresseanmälan
+            Kontakta oss
           </button>
         </Link>
       </div>

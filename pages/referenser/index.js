@@ -24,8 +24,7 @@ const Referenser = ({ referenser }) => {
         <h2 className="text-h2 mb-4 tracking-wide">Våra kundrecensioner</h2>
         <div className="max-w-[700px] w-full mx-auto my-4">
           <p className="mb-2">
-            Här nedan kan du ser mer om vilka projekt vi har gjort. Klicka på
-            någon av bilderna för att läsa mer om arbetet!
+            Här nedan är några av våra utvalda projekt som vi har gjort ute hos kund. Klicka på någon av bilderna för att läsa mer. 
           </p>
         </div>
         <ReferenserSection referenser={referenser} />
