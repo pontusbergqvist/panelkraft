@@ -5,39 +5,57 @@ export default function Home() {
     <>
       <article className="text-center my-28">
         <p className="text-[#222] font-light tracking-widest mb-4 font-mono">
-          Från start till mål
+          Vår process
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
-        <h2 className="tracking-wide text-h2 mb-14">Så här jobbar vi</h2>
-        <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-5 place-content-center px-2 tablet:px-6 text-center tablet:text-left text-black">
+        <h2 className="tracking-wide text-h2 mb-14">Från start till mål</h2>
+        <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-10 place-content-center px-2 tablet:px-6 text-center tablet:text-left justify-center text-black">
           <div>
-            <p>02.</p>
-            <h3 className="text-h3 mb-2">Intresseanmäl</h3>
+            <p>01.</p>
+            <h3 className="text-h3 mb-2">Visa ditt intresse</h3>
             <p className="text-[#222]">
-              Börja med att kontakta oss så berättar vi om möjligheterna hos
-              just dig. Vill du hellre bli kontaktad så kan du göra en
-              intresseanmälan så ringer vi upp. Efter samtalet bokar vi gärna
-              ett kostnadsfritt platsbesök.
+              Kom i kontakt med oss via formuläret här på hemsidan. Efter du
+              fyllt i dina uppgifter kommer du att bli kontaktad utav oss. I
+              detta stadium fångar vi upp grundläggande underlag och gör en
+              förstudie av möjligheterna hos just er.
             </p>
           </div>
           <div>
             <p>02.</p>
-            <h3 className="text-h3 mb-2">Platsbesök</h3>
+            <h3 className="text-h3 mb-2">Boka ett möte</h3>
             <p className="text-[#222]">
-              Väl på plats hos er går vi i detalj igenom hur installationen kan
-              utföras varpå ni även får ett prisförslag att ta ställning till.
-              Vid godkännande av prisförslaget är det äntligen dags för sista
-              momentet - installationen.
+              Det finns många olika faktorer som spelar in för att en
+              solcellsinstallation skall bli lyckad. Varje plats är unik och det
+              krävs ett verkligt möte för att bedöma möjligheterna och ta fram
+              ett skarpt anbud. I detta stadium bokar vi in ett kostnadsfritt
+              platsbesök för att kunna räkna skarpt samt besvara eventuella
+              frågor och funderingar som ni har.
             </p>
           </div>
           <div>
             <p>03.</p>
             <h3 className="text-h3 mb-2">Installation</h3>
             <p className="text-[#222]">
-              Vi genomför samlat installationer hos de som har beställt i
-              området. Oavsett om vi börjar hos dig eller grannen så håller vi
-              alla informerade om det pågående arbetet tills alla producerar sin
-              egen el!
+              Nu börjar det roliga! Vi sköter hela processen från start till
+              mål. Våra behöriga elektriker och montörer kommer att genomföra
+              installationen noggrant, snyggt men framför allt <span className="underline">säkert</span>.
+            </p>
+          </div>
+          <div>
+            <p>04.</p>
+            <h3 className="text-h3 mb-2">Installation</h3>
+            <p className="text-[#222]">
+            Efter avslutat arbete tar vi ett möte tillsammans med er för att gå igenom
+anläggningen innan vi driftsätter, samt överlämna slutdokumentation.
+            </p>
+          </div>
+          <div>
+            <p>05.</p>
+            <h3 className="text-h3 mb-2">Installation</h3>
+            <p className="text-[#222]">
+            Vi jobbar ständigt med att kvalitetssäkra våra installationer och det är viktigt för oss
+att du som kund känner dig nöjd och delaktig hela vägen. Uppföljning är en naturlig
+del av processen hos oss.
             </p>
           </div>
         </section>
@@ -87,26 +105,24 @@ export default function Home() {
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
         <h2 className="tracking-wide text-h2 mb-4">
-          Komplettera era solceller
+        Vi levererar mer än bara solceller!
         </h2>
         <p className="max-w-[700px] mx-auto mb-16 text-[#333]">
-          Vid installation av solceller erbjuder vi även tillval i form av
-          solcellsbatteri och laddbox för elbilen. Nedan är exempel på våra
-          produkter inom respektive segment. Vi installerar alltid utrustning av
-          välkända märken.
+        Kanske önskar ni komplettera er anläggning med ett batteri och elbilsladdare? Vi jobbar
+alltid med kvalitativa och välbeprövade produkter. Nedan följer exempel på vanliga tillval.
         </p>
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))]  place-content-center gap-5 gap-y-12">
           <div className="tablet:text-left">
             <img
-              src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80"
+              src="https://images.unsplash.com/photo-1600490819734-6311c5c6f517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
               alt="Solar cells"
               className="rounded"
             />
-            <h3 className="text-h3 my-3">Solceller</h3>
+            <h3 className="text-h3 my-3">Tankar på elbil?</h3>
             <p className="text-[#333]">
-              Vi tillhandahåller solceller i både svart och silvrig design. Du
-              väljer själv vilken färg du önskar, svart är det mest populära
-              valet.
+            Givetvis kan våra elektriker även installera en eller flera elbilsladdare i samband med att vi
+
+installerar er solcellsanläggning.
             </p>
           </div>
           <div className="tablet:text-left">
@@ -115,22 +131,26 @@ export default function Home() {
               alt="Solar cells"
               className="rounded"
             />
-            <h3 className="text-h3 my-3">Solcellsbatteri</h3>
+            <h3 className="text-h3 my-3">Lagra energi?</h3>
             <p className="text-[#333]">
-              Nyttjar man främst el när solen gått ner kan energilagring vara
-              lämpligt. Vi tillhandahåller olika nivåer av batterikapacitet.
+            Batteri börjar bli ett vanligt komplement till solceller idag!
+
+Vi konsulterar gärna och förklarar fördelarna med ett batteri och hur det fungerar.
+Något som vi kan komplettera er anläggning med om ni önskar!
             </p>
           </div>
           <div className="tablet:text-left">
             <img
-              src="https://images.unsplash.com/photo-1600490819734-6311c5c6f517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
+              src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80"
               alt="Solar cells"
               className="rounded"
             />
-            <h3 className="text-h3 my-3">Laddbox</h3>
+            <h3 className="text-h3 my-3">Typ av anläggning?</h3>
             <p className="text-[#333]">
-              Våra elektriker kan i samband med installationen av solceller
-              sätta upp laddbox till bilen. Finns i flera färger.
+            Vi har kompetens och erfarenhet inom dem olika systemen och är anpassningsbara vad det
+gäller material. Vi lyssnar på era önskemål och lägger därefter fram förslag på anläggning
+
+som vi anser passar er bäst.
             </p>
           </div>
         </section>
@@ -186,15 +206,9 @@ export default function Home() {
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
         <h2 className="tracking-wide text-h2 mb-4">
-          Anmäl ditt intresse redan idag
+          Gör din intresseanmälan redan nu
         </h2>
         <div className="max-w-[700px] w-full mx-auto my-4">
-          <p className="mb-2">
-            Anmäl ditt intresse så kontaktar vi dig och berättar om vad som är
-            bra att tänka på om man funderar på att skaffa solceller. Är du
-            fortsatt intresserad efter samtalet så bokar vi ett kostnadsfritt
-            platsbesök hos dig för att ta fram ett prisförslag.
-          </p>
           <Form />
         </div>
       </article>

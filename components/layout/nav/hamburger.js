@@ -32,7 +32,7 @@ const Hamburger = ({ active, setActive, black }) => {
         ></span>
       </div>
       {active ? (
-        <ul className="absolute text-white right-0 flex flex-col mt-1 bg-[#222] rounded text-right z-10">
+        <ul className="absolute text-white right-0 flex flex-col mt-1 bg-[#222] rounded text-right z-20">
           <Link href="/">
             <li className="pl-16 my-2 pr-2">Hem</li>
           </Link>

@@ -7,20 +7,16 @@ const Nav = ({ active, setActive }) => {
 
   return (
     <div
-      className={`relative overflow-hidden h-screen before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-60 before:top-0 before:z-10`}
-      style={router.route === "/" ? { height: "85vh" } : { height: "40vh" }}
+      className={`relative overflow-hidden h-screen before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-60 before:top-0 before:z-10 ${
+        router.route === "/" ? "tablet:h-[85vh] h-screen" : "h-[55vh]"
+      }`}
     >
       <video
-        src="/header-1920-nosound.mp4"
+        src="/header.mp4"
         muted
         autoPlay
         loop
         className="min-w-full min-h-full object-cover"
-        style={
-          router.route === "/"
-            ? { transform: "translateY(0)" }
-            : { transform: "translateY(-20vh)" }
-        }
       ></video>
       <nav className="absolute top-0 left-1/2 text-lg -translate-x-1/2 flex justify-between items-center w-full max-w-[1000px] px-2 py-4 text-white z-20">
         <Link href="/">
@@ -68,11 +64,11 @@ const Nav = ({ active, setActive }) => {
         </Link>
         <Hamburger active={active} setActive={setActive} />
       </nav>
-      <div className="absolute mt-14 tablet:mt-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[90%] flex flex-col items-center z-20">
+      <div className="absolute mt-14 tablet:mt-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] text-center w-[90%] flex flex-col items-center z-20">
         <img
           src="/panelkraft-no-icon.png"
           alt="Solklart logo"
-          className="max-w-[650px] w-[80%] mx-auto"
+          className="max-w-[650px] w-[80%] mx-auto mb-4"
         />
         <div
           className="flex flex-col items-center"
@@ -80,9 +76,9 @@ const Nav = ({ active, setActive }) => {
             router.route !== "/" ? { display: "none" } : { display: "flex" }
           }
         >
-          <p className="text-white tablet:text-[20px] my-8 font-light drop-shadow-xl font-mono">
-            Vi levererar kompletta installationer av solceller för villor och
-            företagsfastigheter.
+          <p className="text-white tablet:text-[20px] my-8 font-light drop-shadow-xl font-mono header-text">
+            Vi levererar nyckelfärdiga installationer av solceller till villor,
+            företag och lantbruksfastigheter.
           </p>
           <Link href="/#form">
             <button className="border text-white border-accent drop-shadow rounded p-2 px-3 hidden tablet:block">
