@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BliKund = () => {
   return (
     <article className="relative bg-[#f3f3f3] h-[300px] center bg-center bg-cover">
@@ -44,9 +46,11 @@ const BliKund = () => {
         <p className="text-[23px] mt-3 font-light drop-shadow-xl">
           Vill du också bli kund? Gör en intresseanmälan nedan!
         </p>
-        <button className="border mt-6 border-black drop-shadow rounded p-2 px-3">
-          Intresseanmälan
-        </button>
+        <Link href="/#form">
+          <button className="border mt-6 border-black drop-shadow rounded p-2 px-3">
+            Intresseanmälan
+          </button>
+        </Link>
       </div>
     </article>
   );
