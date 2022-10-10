@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <>
@@ -15,13 +17,17 @@ const Footer = () => {
               <p>Din kundvänliga installatör av solceller i Västsverige.</p>
             </div>
             <div className="font-mono tracking-wider flex flex-col tablet:items-start items-center">
-              <a href="index.html" className="underline py-1">
-                Hem
-              </a>
-              <a href="referenser.html" className="underline py-1">
-                Solceller
-              </a>
-              <p className="cursor-pointer underline py-1">Om oss</p>
+              <Link href="/">
+                <a className="underline py-1">
+                  Hem
+                </a>
+              </Link>
+              <Link href="/referenser">
+                <a className="underline py-1">
+                  Referenser
+                </a>
+              </Link>
+              {/* <p className="cursor-pointer underline py-1">Om oss</p> */}
             </div>
           </section>
           <section className="flex flex-col justify-between tablet:mt-0 mt-16 tablet:text-right text-center text-[14px]">
