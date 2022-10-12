@@ -18,11 +18,11 @@ const Layout = ({ route, children }) => {
   }, [router.route]);
 
   return (
-    <>
+    <div className="w-screen">
       <Nav active={active} setActive={setActive} route={route} />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

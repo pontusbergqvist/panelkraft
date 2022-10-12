@@ -7,7 +7,7 @@ const Nav = ({ active, setActive }) => {
 
   return (
     <div
-      className={`bg-[url('https://images.unsplash.com/photo-1629726797843-618688139f5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80')] relative overflow-hidden h-screen before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-60 before:top-0 before:z-10 ${
+      className={`bg-[url('https://images.unsplash.com/photo-1629726797843-618688139f5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4000&q=80')] relative overflow-hidden w-screen h-screen bg-center before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-60 before:top-0 before:z-10 ${
         router.route === "/" ? "tablet:h-[85vh] h-screen" : "h-[55vh]"
       }`}
     >
@@ -58,7 +58,7 @@ const Nav = ({ active, setActive }) => {
           </Link> */}
         </div>
         <Link href="/#form">
-          <button className="border-b-2 ml-10 text-left border-b-accent text-[16px] text-white drop-shadow tablet:block hidden">
+          <button className="border-b-2 ml-10 text-left border-b-accent text-white drop-shadow tablet:block hidden">
             Kontakt
           </button>
         </Link>
