@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const BliKund = () => {
   return (
-    <article className="relative bg-[#f3f3f3] h-[300px] center bg-center bg-cover">
+    <article className="relative bg-accent h-[300px] center bg-center bg-cover">
       <div className="custom-shape-divider-bottom-1662474846 hidden tablet:block">
         <svg
           data-name="Layer 1"

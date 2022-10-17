@@ -16,7 +16,7 @@ module.exports = {
         serif: ["Cambria", "serif"],
       },
       colors: {
-        accent: "#f3f3f3",
+        accent: "#f37f04",
       },
     },
     screens: {

@@ -11,13 +11,13 @@ export const getStaticProps = async () => {
   return {
     props: {
       data,
-      omOssPage,
     },
     revalidate: 10,
   };
 };
 
-export default function Home({ data, omOssPage }) {
+export default function Home({ data }) {
+  console.log(data);
   return (
     <>
       <article className="text-center my-28">
@@ -28,24 +28,64 @@ export default function Home({ data, omOssPage }) {
         <h2 className="tracking-wide text-h2 mb-14">
           {data.fields.sektion1Rubrik}
         </h2>
-        <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-10 place-content-center px-2 tablet:px-6 text-center tablet:text-left justify-center text-black">
-          <div>
+        <section className="max-w-[500px] w-full mx-auto grid grid-cols-1 gap-10 place-content-center px-2 tablet:px-6 text-center tablet:text-left justify-center text-black">
+          <div className="text-center">
+            <Image
+              src={`https:${data.fields.sektion1Cell1Bild.fields.file.url}`}
+              alt={data.fields.sektion1Cell1Bild.fields.title}
+              height="60%"
+              width="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
             <h3 className="text-h3 mb-2">{data.fields.cell1Rubrik}</h3>
             <p className="text-[#222]">{data.fields.sektion1Cell1}</p>
           </div>
-          <div>
+          <div className="text-center">
+            <Image
+              src={`https:${data.fields.sektion1Cell2Bild.fields.file.url}`}
+              alt={data.fields.sektion1Cell2Bild.fields.title}
+              height="60%"
+              width="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
             <h3 className="text-h3 mb-2">{data.fields.cell2Rubrik}</h3>
             <p className="text-[#222]">{data.fields.sektion1Cell2}</p>
           </div>
-          <div>
+          <div className="text-center">
+            <Image
+              src={`https:${data.fields.sektion1Cell3BIld.fields.file.url}`}
+              alt={data.fields.sektion1Cell3BIld.fields.title}
+              height="60%"
+              width="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
             <h3 className="text-h3 mb-2">{data.fields.cell3Rubrik}</h3>
             <p className="text-[#222]">{data.fields.sektion1Cell3}</p>
           </div>
-          <div>
+          <div className="text-center">
+            <Image
+              src={`https:${data.fields.sektion1Cell4Bild.fields.file.url}`}
+              alt={data.fields.sektion1Cell4Bild.fields.title}
+              height="60%"
+              width="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
             <h3 className="text-h3 mb-2">{data.fields.cell4Rubrik}</h3>
             <p className="text-[#222]">{data.fields.sektion1Cell4}</p>
           </div>
-          <div>
+          <div className="text-center">
+            <Image
+              src={`https:${data.fields.sektion1Cell5Bild.fields.file.url}`}
+              alt={data.fields.sektion1Cell5Bild.fields.title}
+              height="60%"
+              width="100%"
+              layout="responsive"
+              objectFit="contain"
+            />
             <h3 className="text-h3 mb-2">{data.fields.cell5Rubrik}</h3>
             <p className="text-[#222]">{data.fields.sektion1Cell5}</p>
           </div>
@@ -104,8 +144,8 @@ export default function Home({ data, omOssPage }) {
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))]  place-content-center gap-5 gap-y-12">
           <div className="tablet:text-left">
             <Image
-              src={`https://images.unsplash.com/photo-1600490819734-6311c5c6f517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80`}
-              alt="Solar cells"
+              src={`https:${data.fields.sektion2Cell1Bild.fields.file.url}`}
+              alt={data.fields.sektion2Cell1Bild.fields.title}
               className="rounded"
               layout="responsive"
               height="80%"
@@ -117,8 +157,8 @@ export default function Home({ data, omOssPage }) {
           </div>
           <div className="tablet:text-left">
             <Image
-              src="https://images.unsplash.com/photo-1592318348310-f31b61a931c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-              alt="Solar cells"
+              src={`https:${data.fields.sektion2Cell2Bild.fields.file.url}`}
+              alt={data.fields.sektion2Cell2Bild.fields.title}
               className="rounded"
               layout="responsive"
               height="80%"
@@ -130,8 +170,8 @@ export default function Home({ data, omOssPage }) {
           </div>
           <div className="tablet:text-left">
             <Image
-              src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80"
-              alt="Solar cells"
+              src={`https:${data.fields.sektion2Cell3Bild.fields.file.url}`}
+              alt={data.fields.sektion2Cell3Bild.fields.title}
               className="rounded"
               layout="responsive"
               height="80%"
@@ -185,12 +225,9 @@ export default function Home({ data, omOssPage }) {
           </svg>
         </div>
       </article>
-      <div className="mt-40">
-        <OmOssSection data={omOssPage} />
-      </div>
       <article
         id="form"
-        className="text-center max-w-[1000px] w-full mx-auto p-2 mt-28 mb-10"
+        className="text-center max-w-[1000px] w-full mx-auto p-2 mt- mb-10"
       >
         <p className="text-[#222] font-light tracking-widest mb-4 font-mono">
           Kontaktformulär
