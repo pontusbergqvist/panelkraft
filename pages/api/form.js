@@ -9,7 +9,6 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (req, res) => {
   let body = "";
-  console.log(req.body);
   try {
     body = JSON.parse(req.body);
   } catch (error) {
@@ -50,7 +49,6 @@ export default async (req, res) => {
         text: emailBody,
         html: emailBody.replace(/\r\n/g, "<br>"),
       });
-      console.log("server runs send function");
     } catch (error) {
       console.log(error);
       error.response && console.log(error.response.body);

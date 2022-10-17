@@ -2,8 +2,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Hamburger from "./hamburger";
 
-const Nav = ({ active, setActive }) => {
+const Nav = ({ active, setActive, data }) => {
   const router = useRouter();
+  console.log(data);
 
   return (
     <div
@@ -22,8 +23,8 @@ const Nav = ({ active, setActive }) => {
         <Link href="/">
           <a>
             <img
-              src="/small-logo.png"
-              alt="Solklart logo"
+              src={data.fields.litenLogotyp.fields.file.url}
+              alt={data.fields.litenLogotyp.fields.title}
               className="w-[50px] hidden tablet:inline"
             />
           </a>
@@ -53,9 +54,18 @@ const Nav = ({ active, setActive }) => {
               Referenser
             </a>
           </Link>
-          {/* <Link href="/">
-            <a className="px-2 mx-1 hover:text-[#ccc]">Om oss</a>
-          </Link> */}
+          <Link href="/om-oss">
+            <a
+              className="px-2 mx-1 hover:text-[#ccc]"
+              style={
+                router.route === "/om-oss"
+                  ? { textDecoration: "underline" }
+                  : { textDecoration: "none" }
+              }
+            >
+              Om oss
+            </a>
+          </Link>
         </div>
         <Link href="/#form">
           <button className="border-b-2 ml-10 text-left border-b-accent text-white drop-shadow tablet:block hidden">
@@ -66,8 +76,8 @@ const Nav = ({ active, setActive }) => {
       </nav>
       <div className="absolute mt-14 tablet:mt-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] text-center w-[90%] flex flex-col items-center z-20">
         <img
-          src="/panelkraft-no-icon.png"
-          alt="Solklart logo"
+          src={data.fields.storLogotyp.fields.file.url}
+          alt={data.fields.storLogotyp.fields.title}
           className="max-w-[650px] w-[80%] mx-auto mb-4"
         />
         <div
@@ -77,8 +87,7 @@ const Nav = ({ active, setActive }) => {
           }
         >
           <p className="text-white tablet:text-[20px] my-8 font-light drop-shadow-xl font-mono header-text">
-            Vi levererar nyckelfärdiga installationer av solceller till villor,
-            företag och lantbruksfastigheter.
+            {data.fields.slogan}
           </p>
           <Link href="/#form">
             <button className="border text-white border-accent drop-shadow rounded p-2 px-3 hidden tablet:block">

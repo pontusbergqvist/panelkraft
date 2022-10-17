@@ -1,58 +1,53 @@
+import OmOssSection from "../components/omOssSection";
 import Form from "../components/form";
+import Contentful from "../utils/contentful";
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const contentful = new Contentful();
+  const omOssPage = await contentful.getOmOssPage();
+  const pageInfo = await contentful.getPageInfo();
+  const data = await contentful.getHomePage();
+
+  return {
+    props: {
+      data,
+      omOssPage,
+      pageInfo,
+    },
+  };
+};
+
+export default function Home({ data, omOssPage }) {
   return (
     <>
       <article className="text-center my-28">
         <p className="text-[#222] font-light tracking-widest mb-4 font-mono">
-          Vår process
+          {data.fields.sektion1TextOvanfrRubrik}
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
         <h2 className="tracking-wide text-h2 mb-14">
-          Hur vi jobbar på Panelkraft
+          {data.fields.sektion1Rubrik}
         </h2>
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-10 place-content-center px-2 tablet:px-6 text-center tablet:text-left justify-center text-black">
           <div>
-            <h3 className="text-h3 mb-2">Visa ditt intresse</h3>
-            <p className="text-[#222]">
-              Kom i kontakt med oss via formuläret här på hemsidan. Efter du
-              fyllt i dina uppgifter kommer vi att kontakta dig. Vi fångar upp
-              grundläggande underlag och gör en förstudie av möjligheterna hos
-              just er.
-            </p>
+            <h3 className="text-h3 mb-2">{data.fields.cell1Rubrik}</h3>
+            <p className="text-[#222]">{data.fields.sektion1Cell1}</p>
           </div>
           <div>
-            <h3 className="text-h3 mb-2">Boka ett möte</h3>
-            <p className="text-[#222]">
-              Varje plats är unik och det krävs ett verkligt möte för att bedöma
-              möjligheterna och ta fram ett skarpt anbud. I detta skede bokar vi
-              in ett kostnadsfritt platsbesök.
-            </p>
+            <h3 className="text-h3 mb-2">{data.fields.cell2Rubrik}</h3>
+            <p className="text-[#222]">{data.fields.sektion1Cell2}</p>
           </div>
           <div>
-            <h3 className="text-h3 mb-2">Installation</h3>
-            <p className="text-[#222]">
-              Vi sköter hela processen från start till mål. Våra behöriga
-              elektriker och montörer kommer att genomföra installationen
-              noggrant, snyggt men framför allt{" "}
-              <span className="underline">säkert</span>.
-            </p>
+            <h3 className="text-h3 mb-2">{data.fields.cell3Rubrik}</h3>
+            <p className="text-[#222]">{data.fields.sektion1Cell3}</p>
           </div>
           <div>
-            <h3 className="text-h3 mb-2">Driftsättning</h3>
-            <p className="text-[#222]">
-              Efter avslutat arbete tar vi ett möte tillsammans med er för att
-              gå igenom anläggningen innan vi driftsätter, samt överlämna
-              slutdokumentation.
-            </p>
+            <h3 className="text-h3 mb-2">{data.fields.cell4Rubrik}</h3>
+            <p className="text-[#222]">{data.fields.sektion1Cell4}</p>
           </div>
           <div>
-            <h3 className="text-h3 mb-2">Uppföljning</h3>
-            <p className="text-[#222]">
-              Vi jobbar ständigt med att kvalitetssäkra våra installationer och
-              det är viktigt för oss att du som kund känner dig nöjd och
-              delaktig hela vägen.
-            </p>
+            <h3 className="text-h3 mb-2">{data.fields.cell5Rubrik}</h3>
+            <p className="text-[#222]">{data.fields.sektion1Cell5}</p>
           </div>
         </section>
       </article>
@@ -97,16 +92,14 @@ export default function Home() {
           </svg>
         </div>
         <p className="text-[#222] font-light tracking-widest mb-4 font-mono">
-          Tillval
+          {data.fields.sektion2TextOvanfrRubrik}
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
         <h2 className="tracking-wide text-h2 mb-4">
-          Vi levererar mer än bara solceller!
+          {data.fields.sektion2Rubrik}
         </h2>
         <p className="max-w-[700px] mx-auto mb-16 text-[#333]">
-          Kanske önskar ni komplettera er anläggning med ett batteri och
-          elbilsladdare? Vi jobbar alltid med kvalitativa och välbeprövade
-          produkter. Nedan följer exempel på vanliga tillval.
+          {data.fields.sektion2Beskrivning}
         </p>
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))]  place-content-center gap-5 gap-y-12">
           <div className="tablet:text-left">
@@ -115,12 +108,8 @@ export default function Home() {
               alt="Solar cells"
               className="rounded"
             />
-            <h3 className="text-h3 my-3">Tankar på elbil?</h3>
-            <p className="text-[#333]">
-              Givetvis kan våra elektriker även installera en eller flera
-              elbilsladdare i samband med att vi installerar er
-              solcellsanläggning.
-            </p>
+            <h3 className="text-h3 my-3">{data.fields.sektion2Cell1Rubrik}</h3>
+            <p className="text-[#333]">{data.fields.sektion2Cell1}</p>
           </div>
           <div className="tablet:text-left">
             <img
@@ -128,13 +117,8 @@ export default function Home() {
               alt="Solar cells"
               className="rounded"
             />
-            <h3 className="text-h3 my-3">Lagra energi?</h3>
-            <p className="text-[#333]">
-              Batteri börjar bli ett vanligt komplement till solceller idag! Vi
-              konsulterar gärna och förklarar fördelarna med ett batteri och hur
-              det fungerar. Något som vi kan komplettera er anläggning med om ni
-              önskar!
-            </p>
+            <h3 className="text-h3 my-3">{data.fields.sektion2Cell2Rubrik}</h3>
+            <p className="text-[#333]">{data.fields.sektion2Cell2}</p>
           </div>
           <div className="tablet:text-left">
             <img
@@ -142,13 +126,8 @@ export default function Home() {
               alt="Solar cells"
               className="rounded"
             />
-            <h3 className="text-h3 my-3">Typ av anläggning?</h3>
-            <p className="text-[#333]">
-              Vi har kompetens och erfarenhet inom dem olika systemen och är
-              anpassningsbara vad det gäller material. Vi lyssnar på era
-              önskemål och lägger därefter fram förslag på anläggning som vi
-              anser passar er bäst.
-            </p>
+            <h3 className="text-h3 my-3">{data.fields.sektion2Cell3Rubrik}</h3>
+            <p className="text-[#333]">{data.fields.sektion2Cell3}</p>
           </div>
         </section>
         {/* <p className="mt-20 underline text-[18px] text-[#111] tracking-wide">
@@ -194,6 +173,9 @@ export default function Home() {
           </svg>
         </div>
       </article>
+      <div className="mt-40">
+        <OmOssSection data={omOssPage} />
+      </div>
       <article
         id="form"
         className="text-center max-w-[1000px] w-full mx-auto p-2 mt-28 mb-10"

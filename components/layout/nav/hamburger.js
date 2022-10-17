@@ -39,7 +39,7 @@ const Hamburger = ({ active, setActive, black }) => {
           <Link href="/referenser">
             <li className="pl-16 my-2 pr-2">Referenser</li>
           </Link>
-          <Link href="/">
+          <Link href="/om-oss">
             <li className="pl-16 my-2 pr-2">Om oss</li>
           </Link>
         </ul>

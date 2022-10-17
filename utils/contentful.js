@@ -94,4 +94,24 @@ export default class Contentful {
       };
     });
   }
+
+  async getOmOssPage() {
+    const collection = await this.client.getEntry("1EPrw9mLkHTaWAQ8ikFxN9");
+    return collection;
+  }
+
+  async getReferralPage() {
+    const collection = await this.client.getEntry("2EDcmaG932hG4DQrPgcbyT");
+    return collection;
+  }
+
+  async getHomePage() {
+    const collection = await this.client.getEntry("5Z9AffKULq0y5vKA2SGME0");
+    return collection;
+  }
+
+  async getPageInfo() {
+    const collection = await this.client.getEntry("4KJt0jSITroyEPb8ozYZBT");
+    return collection;
+  }
 }

@@ -5,27 +5,30 @@ import Contentful from "../../utils/contentful";
 export const getStaticProps = async () => {
   const contentful = new Contentful();
   const referenser = await contentful.getAllReferrals();
+  const page = await contentful.getReferralPage();
+  const pageInfo = await contentful.getPageInfo();
 
   return {
     props: {
       referenser,
+      page,
+      pageInfo,
     },
   };
 };
 
-const Referenser = ({ referenser }) => {
+const Referenser = ({ referenser, page }) => {
+  const { textOvanfrRubrik, rubrik, beskrivning } = page.fields;
   return (
     <>
       <article className="tablet:my-24 my-10 text-center max-w-[1200px] w-full mx-auto p-2">
         <p className="text-[#222] font-light tracking-wider mb-4 font-mono">
-          Referenser
+          {textOvanfrRubrik}
         </p>
         <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
-        <h2 className="text-h2 mb-4 tracking-wide">Våra kundrecensioner</h2>
+        <h2 className="text-h2 mb-4 tracking-wide">{rubrik}</h2>
         <div className="max-w-[700px] w-full mx-auto my-4">
-          <p className="mb-2">
-            Här nedan är några av våra utvalda projekt som vi har gjort ute hos kund. Klicka på någon av bilderna för att läsa mer. 
-          </p>
+          <p className="mb-2">{beskrivning}</p>
         </div>
         <ReferenserSection referenser={referenser} />
       </article>

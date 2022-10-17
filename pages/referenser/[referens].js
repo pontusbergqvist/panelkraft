@@ -15,9 +15,11 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const contentful = new Contentful();
   const referens = await contentful.getReferral(params.referens);
+  const pageInfo = await contentful.getPageInfo();
   return {
     props: {
       referens,
+      pageInfo,
     },
   };
 };
