@@ -5,12 +5,10 @@ import Contentful from "../utils/contentful";
 export const getStaticProps = async () => {
   const contentful = new Contentful();
   const data = await contentful.getOmOssPage();
-  const pageInfo = await contentful.getPageInfo();
 
   return {
     props: {
       data,
-      pageInfo,
     },
   };
 };

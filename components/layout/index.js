@@ -3,8 +3,9 @@ import Nav from "./nav/nav";
 import Footer from "./footer";
 import useWindow from "../../hooks/useWindow";
 import { useRouter } from "next/router";
+import data from "../../utils/layout-data.preval";
 
-const Layout = ({ route, data, children }) => {
+const Layout = ({ route, children }) => {
   const [active, setActive] = useState(false);
   const mobile = useWindow();
   const router = useRouter();

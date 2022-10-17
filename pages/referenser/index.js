@@ -6,13 +6,11 @@ export const getStaticProps = async () => {
   const contentful = new Contentful();
   const referenser = await contentful.getAllReferrals();
   const page = await contentful.getReferralPage();
-  const pageInfo = await contentful.getPageInfo();
 
   return {
     props: {
       referenser,
       page,
-      pageInfo,
     },
   };
 };

@@ -26,7 +26,6 @@ const Footer = ({ data }) => {
               <Link href="/om-oss">
                 <a className="underline py-1">Om oss</a>
               </Link>
-              {/* <p className="cursor-pointer underline py-1">Om oss</p> */}
             </div>
           </section>
           <section className="flex flex-col justify-between tablet:mt-0 mt-16 tablet:text-right text-center text-[14px]">

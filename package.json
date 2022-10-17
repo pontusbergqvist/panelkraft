@@ -12,6 +12,7 @@
     "@sendgrid/mail": "^7.7.0",
     "contentful": "^9.2.5",
     "next": "12.3.0",
+    "next-plugin-preval": "^1.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
