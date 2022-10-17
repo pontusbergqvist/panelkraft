@@ -133,14 +133,14 @@ export default function Home({ data }) {
             ></path>
           </svg>
         </div>
-        <p className="text-[#222] font-light tracking-widest mb-4 font-mono">
+        <p className="text-black font-light tracking-widest mb-4 font-mono">
           {data.fields.sektion2TextOvanfrRubrik}
         </p>
-        <div className="w-[50px] h-[2px] mb-4 bg-[#666] mx-auto"></div>
+        <div className="w-[50px] h-[2px] mb-4 bg-black mx-auto"></div>
         <h2 className="tracking-wide text-h2 mb-4">
           {data.fields.sektion2Rubrik}
         </h2>
-        <p className="max-w-[700px] mx-auto mb-16 text-[#333]">
+        <p className="max-w-[700px] mx-auto mb-16 text-black">
           {data.fields.sektion2Beskrivning}
         </p>
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))]  place-content-center gap-5 gap-y-12">
@@ -156,7 +156,7 @@ export default function Home({ data }) {
               objectFit="cover"
             />
             <h3 className="text-h3 my-3">{data.fields.sektion2Cell1Rubrik}</h3>
-            <p className="text-[#333]">{data.fields.sektion2Cell1}</p>
+            <p className="text-black">{data.fields.sektion2Cell1}</p>
           </div>
           <div className="tablet:text-left">
             <Image
@@ -170,7 +170,7 @@ export default function Home({ data }) {
               objectFit="cover"
             />
             <h3 className="text-h3 my-3">{data.fields.sektion2Cell2Rubrik}</h3>
-            <p className="text-[#333]">{data.fields.sektion2Cell2}</p>
+            <p className="text-black">{data.fields.sektion2Cell2}</p>
           </div>
           <div className="tablet:text-left">
             <Image
@@ -184,7 +184,7 @@ export default function Home({ data }) {
               objectFit="cover"
             />
             <h3 className="text-h3 my-3">{data.fields.sektion2Cell3Rubrik}</h3>
-            <p className="text-[#333]">{data.fields.sektion2Cell3}</p>
+            <p className="text-black">{data.fields.sektion2Cell3}</p>
           </div>
         </section>
         {/* <p className="mt-20 underline text-[18px] text-[#111] tracking-wide">
