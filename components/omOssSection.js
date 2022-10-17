@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const OmOssSection = ({ data }) => {
   const {
     beskrivningDavid,
@@ -27,7 +29,14 @@ const OmOssSection = ({ data }) => {
       </p>
       <div className="grid grid-cols-1 desktop:grid-cols-2 text-left gap-10 max-w-[1200px] mx-auto px-3">
         <div>
-          <img src={bildMarkus.fields.file.url} alt={bildMarkus.fields.title} />
+          <Image
+            src={`https:${bildMarkus.fields.file.url}`}
+            alt={bildMarkus.fields.title}
+            layout="responsive"
+            height="70%"
+            width="100%"
+            objectFit="cover"
+          />
           <p className="text-h3 mt-3">Markus Wilson</p>
           <p className="italic mb-3">{yrkestitelMarkus}</p>
           {getDescriptionBlocks(beskrivningMarkus).map((text, index) => (
@@ -37,7 +46,14 @@ const OmOssSection = ({ data }) => {
           ))}
         </div>
         <div>
-          <img src={bildDavid.fields.file.url} alt={bildDavid.fields.title} />
+          <Image
+            src={`https:${bildDavid.fields.file.url}`}
+            alt={bildDavid.fields.title}
+            layout="responsive"
+            height="70%"
+            width="100%"
+            objectFit="cover"
+          />
           <p className="text-h3 mt-3">David Estehghari</p>
           <p className="italic mb-3">{yrkestitelDavid}</p>
           {getDescriptionBlocks(beskrivningDavid).map((text, index) => (

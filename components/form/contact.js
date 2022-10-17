@@ -8,7 +8,7 @@ const Contact = ({ isOk, contactIsValid, setContactIsValid }) => {
     !phoneIsChecked && !emailIsChecked
       ? setContactIsValid(false)
       : setContactIsValid(true);
-  }, [phoneIsChecked, emailIsChecked]);
+  }, [phoneIsChecked, emailIsChecked, setContactIsValid]);
 
   return (
     <div className="flex flex-col text-left my-5">

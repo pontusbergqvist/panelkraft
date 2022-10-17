@@ -1,3 +1,4 @@
+import Image from "next/image";
 import OmOssSection from "../components/omOssSection";
 import Form from "../components/form";
 import Contentful from "../utils/contentful";
@@ -101,28 +102,40 @@ export default function Home({ data, omOssPage }) {
         </p>
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))]  place-content-center gap-5 gap-y-12">
           <div className="tablet:text-left">
-            <img
-              src="https://images.unsplash.com/photo-1600490819734-6311c5c6f517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
+            <Image
+              src={`https://images.unsplash.com/photo-1600490819734-6311c5c6f517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80`}
               alt="Solar cells"
               className="rounded"
+              layout="responsive"
+              height="80%"
+              width="100%"
+              objectFit="cover"
             />
             <h3 className="text-h3 my-3">{data.fields.sektion2Cell1Rubrik}</h3>
             <p className="text-[#333]">{data.fields.sektion2Cell1}</p>
           </div>
           <div className="tablet:text-left">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1592318348310-f31b61a931c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
               alt="Solar cells"
               className="rounded"
+              layout="responsive"
+              height="80%"
+              width="100%"
+              objectFit="cover"
             />
             <h3 className="text-h3 my-3">{data.fields.sektion2Cell2Rubrik}</h3>
             <p className="text-[#333]">{data.fields.sektion2Cell2}</p>
           </div>
           <div className="tablet:text-left">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80"
               alt="Solar cells"
               className="rounded"
+              layout="responsive"
+              height="80%"
+              width="100%"
+              objectFit="cover"
             />
             <h3 className="text-h3 my-3">{data.fields.sektion2Cell3Rubrik}</h3>
             <p className="text-[#333]">{data.fields.sektion2Cell3}</p>

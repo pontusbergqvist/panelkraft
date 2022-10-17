@@ -2,6 +2,7 @@ import { useState } from "react";
 import Gallery from "../../components/gallery";
 import Contentful from "../../utils/contentful";
 import BliKund from "../../components/referenser/bliKund";
+import Image from "next/image";
 
 export const getStaticPaths = async () => {
   const contentful = new Contentful();
@@ -56,10 +57,13 @@ const Referens = ({ referens }) => {
         </div>
         <header className="relative">
           <div className="relative before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-10 before:top-0 my-10">
-            <img
-              src={referens.thumbnail.fields.file.url}
+            <Image
+              src={`https:${referens.thumbnail.fields.file.url}`}
               alt={referens.thumbnail.fields.description}
-              className="w-full"
+              height="50%"
+              width="100%"
+              layout="responsive"
+              objectFit="cover"
             />
           </div>
           {/* <p className="absolute bottom-5 left-5 text-h2 bg-white p-2 font-mono">
@@ -99,12 +103,16 @@ const Referens = ({ referens }) => {
             <h3 className="font-mono text-h3 text-left">Bildgalleri</h3>
             <div className="image-gallery grid grid-cols-1 desktop:grid-cols-4 place-content-center gap-1">
               {referens.images.map((image, key) => (
-                <img
+                <Image
                   key={key}
-                  src={image.fields.file.url}
+                  src={`https:${image.fields.file.url}`}
                   alt={image.fields.description}
-                  className="aspect-square object-cover cursor-zoom-in"
                   onClick={() => onClick(image)}
+                  height="100%"
+                  width="100%"
+                  layout="responsive"
+                  objectFit="cover"
+                  className="cursor-pointer"
                 />
               ))}
             </div>

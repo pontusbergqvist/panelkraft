@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
@@ -58,7 +59,7 @@ const Gallery = ({ setOpenGallery, image, setImage, images }) => {
           </div>
         </div>
         <img
-          src={image && getCurrentImage(image).fields.file.url}
+          src={image && `https:${getCurrentImage(image).fields.file.url}`}
           alt="Djupedalsäng"
           className="mx-auto"
         />

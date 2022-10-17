@@ -8,7 +8,7 @@ const Request = ({ isOk, requestIsValid, setRequestIsValid }) => {
     !vetaMerIsChecked && !bokaIsChecked
       ? setRequestIsValid(false)
       : setRequestIsValid(true);
-  }, [vetaMerIsChecked, bokaIsChecked]);
+  }, [vetaMerIsChecked, bokaIsChecked, setRequestIsValid]);
 
   return (
     <div className="flex flex-col text-left my-5">

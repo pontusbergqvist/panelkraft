@@ -4,10 +4,7 @@ const mail = require("@sendgrid/mail");
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// todo:
-// catch bad requests
-
-export default async (req, res) => {
+const form = async (req, res) => {
   let body = "";
   try {
     body = JSON.parse(req.body);
@@ -56,3 +53,5 @@ export default async (req, res) => {
     return res.status(200).json({ status: "Ok" });
   }
 };
+
+export default form;

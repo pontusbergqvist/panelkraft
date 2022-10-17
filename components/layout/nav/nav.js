@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Hamburger from "./hamburger";
 
@@ -6,7 +7,7 @@ const Nav = ({ active, setActive, data }) => {
   const router = useRouter();
   return (
     <div
-      className={`relative overflow-hidden w-screen h-screen bg-center before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-60 before:top-0 before:z-10 ${
+      className={`relative overflow-hidden w-screen h-screen bg-center before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-40 before:top-0 before:z-10 ${
         router.route === "/" ? "tablet:h-[85vh] h-screen" : "h-[55vh]"
       }`}
     >
@@ -21,10 +22,12 @@ const Nav = ({ active, setActive, data }) => {
       <nav className="absolute top-0 left-1/2 text-lg -translate-x-1/2 flex justify-between items-center w-full max-w-[1000px] px-2 py-4 text-white z-20">
         <Link href="/">
           <a>
-            <img
-              src={data.fields.litenLogotyp.fields.file.url}
+            <Image
+              src={`https:${data.fields.litenLogotyp.fields.file.url}`}
               alt={data.fields.litenLogotyp.fields.title}
               className="w-[50px] hidden tablet:inline"
+              width="50px"
+              height="50px"
             />
           </a>
         </Link>
@@ -75,7 +78,7 @@ const Nav = ({ active, setActive, data }) => {
       </nav>
       <div className="absolute mt-14 tablet:mt-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] text-center w-[90%] flex flex-col items-center z-20">
         <img
-          src={data.fields.storLogotyp.fields.file.url}
+          src={`https:${data.fields.storLogotyp.fields.file.url}`}
           alt={data.fields.storLogotyp.fields.title}
           className="max-w-[650px] w-[80%] mx-auto mb-4"
         />
