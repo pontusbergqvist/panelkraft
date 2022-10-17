@@ -6,17 +6,18 @@ const Nav = ({ active, setActive, data }) => {
   const router = useRouter();
   return (
     <div
-      className={`bg-[url('https://images.unsplash.com/photo-1629726797843-618688139f5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4000&q=80')] relative overflow-hidden w-screen h-screen bg-center before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-60 before:top-0 before:z-10 ${
+      className={`relative overflow-hidden w-screen h-screen bg-center before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-60 before:top-0 before:z-10 ${
         router.route === "/" ? "tablet:h-[85vh] h-screen" : "h-[55vh]"
       }`}
     >
-      {/* <video
+      <video
         src="/panelkraft.mov"
         muted
         autoPlay
         loop
+        playsInline
         className="min-w-full min-h-full object-cover"
-      ></video> */}
+      ></video>
       <nav className="absolute top-0 left-1/2 text-lg -translate-x-1/2 flex justify-between items-center w-full max-w-[1000px] px-2 py-4 text-white z-20">
         <Link href="/">
           <a>
@@ -99,3 +100,5 @@ const Nav = ({ active, setActive, data }) => {
 };
 
 export default Nav;
+
+// {`bg-[url('https://images.unsplash.com/photo-1629726797843-618688139f5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4000&q=80')]
