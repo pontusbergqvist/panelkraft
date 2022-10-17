@@ -13,6 +13,7 @@ export const getStaticProps = async () => {
       data,
       omOssPage,
     },
+    revalidate: 10,
   };
 };
 

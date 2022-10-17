@@ -20,6 +20,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       referens,
     },
+    revalidate: 10,
   };
 };
 

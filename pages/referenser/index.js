@@ -12,6 +12,7 @@ export const getStaticProps = async () => {
       referenser,
       page,
     },
+    revalidate: 10,
   };
 };
 
