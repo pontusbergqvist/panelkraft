@@ -59,6 +59,7 @@ const Referens = ({ referens }) => {
         <header className="relative">
           <div className="relative before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-10 before:top-0 my-10">
             <Image
+              priority={true}
               src={`https:${referens.thumbnail.fields.file.url}`}
               alt={referens.thumbnail.fields.description}
               height="50%"
@@ -105,6 +106,7 @@ const Referens = ({ referens }) => {
             <div className="image-gallery grid grid-cols-1 desktop:grid-cols-4 place-content-center gap-1">
               {referens.images.map((image, key) => (
                 <Image
+                  priority={true}
                   key={key}
                   src={`https:${image.fields.file.url}`}
                   alt={image.fields.description}

@@ -6,6 +6,7 @@ const Referens = ({ data }) => {
     <Link href={`/referenser/${data.slug}`}>
       <div className="relative cursor-pointer">
         <Image
+          priority={true}
           src={`https:${data.thumbnail.fields.file.url}`}
           className="aspect-square object-cover opacity-90"
           alt={data.address}

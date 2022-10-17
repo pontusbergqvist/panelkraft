@@ -30,6 +30,7 @@ const OmOssSection = ({ data }) => {
       <div className="grid grid-cols-1 desktop:grid-cols-2 text-left gap-10 max-w-[1200px] mx-auto px-3">
         <div>
           <Image
+            priority={true}
             src={`https:${bildMarkus.fields.file.url}`}
             alt={bildMarkus.fields.title}
             layout="responsive"
@@ -47,6 +48,7 @@ const OmOssSection = ({ data }) => {
         </div>
         <div>
           <Image
+            priority={true}
             src={`https:${bildDavid.fields.file.url}`}
             alt={bildDavid.fields.title}
             layout="responsive"

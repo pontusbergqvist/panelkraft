@@ -1,11 +1,9 @@
 import Image from "next/image";
-import OmOssSection from "../components/omOssSection";
 import Form from "../components/form";
 import Contentful from "../utils/contentful";
 
 export const getStaticProps = async () => {
   const contentful = new Contentful();
-  const omOssPage = await contentful.getOmOssPage();
   const data = await contentful.getHomePage();
 
   return {
@@ -17,7 +15,6 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ data }) {
-  console.log(data);
   return (
     <>
       <article className="text-center my-28">
@@ -31,6 +28,7 @@ export default function Home({ data }) {
         <section className="max-w-[500px] w-full mx-auto grid grid-cols-1 gap-10 place-content-center px-2 tablet:px-6 text-center tablet:text-left justify-center text-black">
           <div className="text-center">
             <Image
+              priority={true}
               src={`https:${data.fields.sektion1Cell1Bild.fields.file.url}`}
               alt={data.fields.sektion1Cell1Bild.fields.title}
               height="60%"
@@ -43,6 +41,7 @@ export default function Home({ data }) {
           </div>
           <div className="text-center">
             <Image
+              priority={true}
               src={`https:${data.fields.sektion1Cell2Bild.fields.file.url}`}
               alt={data.fields.sektion1Cell2Bild.fields.title}
               height="60%"
@@ -55,6 +54,7 @@ export default function Home({ data }) {
           </div>
           <div className="text-center">
             <Image
+              priority={true}
               src={`https:${data.fields.sektion1Cell3BIld.fields.file.url}`}
               alt={data.fields.sektion1Cell3BIld.fields.title}
               height="60%"
@@ -67,6 +67,7 @@ export default function Home({ data }) {
           </div>
           <div className="text-center">
             <Image
+              priority={true}
               src={`https:${data.fields.sektion1Cell4Bild.fields.file.url}`}
               alt={data.fields.sektion1Cell4Bild.fields.title}
               height="60%"
@@ -79,6 +80,7 @@ export default function Home({ data }) {
           </div>
           <div className="text-center">
             <Image
+              priority={true}
               src={`https:${data.fields.sektion1Cell5Bild.fields.file.url}`}
               alt={data.fields.sektion1Cell5Bild.fields.title}
               height="60%"
@@ -144,6 +146,7 @@ export default function Home({ data }) {
         <section className="max-w-[1000px] w-full mx-auto grid grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))]  place-content-center gap-5 gap-y-12">
           <div className="tablet:text-left">
             <Image
+              priority={true}
               src={`https:${data.fields.sektion2Cell1Bild.fields.file.url}`}
               alt={data.fields.sektion2Cell1Bild.fields.title}
               className="rounded"
@@ -157,6 +160,7 @@ export default function Home({ data }) {
           </div>
           <div className="tablet:text-left">
             <Image
+              priority={true}
               src={`https:${data.fields.sektion2Cell2Bild.fields.file.url}`}
               alt={data.fields.sektion2Cell2Bild.fields.title}
               className="rounded"
@@ -170,6 +174,7 @@ export default function Home({ data }) {
           </div>
           <div className="tablet:text-left">
             <Image
+              priority={true}
               src={`https:${data.fields.sektion2Cell3Bild.fields.file.url}`}
               alt={data.fields.sektion2Cell3Bild.fields.title}
               className="rounded"
