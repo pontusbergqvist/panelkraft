@@ -34,10 +34,10 @@ const Nav = ({ active, setActive, data }) => {
         <div className="tablet:flex items-center ml-5 mr-auto font-mono hidden">
           <Link href="/">
             <a
-              className="px-2 mx-1 hover:text-[#ccc]"
+              className="mx-3 hover:text-[#ccc]"
               style={
                 router.route === "/"
-                  ? { textDecoration: "underline" }
+                  ? { borderBottom: "2px solid #f37f04" }
                   : { textDecoration: "none" }
               }
             >
@@ -46,10 +46,10 @@ const Nav = ({ active, setActive, data }) => {
           </Link>
           <Link href="/referenser">
             <a
-              className="px-2 mx-1 hover:text-[#ccc]"
+              className="mx-3 hover:text-[#ccc]"
               style={
-                router.route === "/referenser"
-                  ? { textDecoration: "underline" }
+                router.route.includes("/referenser")
+                  ? { borderBottom: "2px solid #f37f04" }
                   : { textDecoration: "none" }
               }
             >
@@ -58,10 +58,10 @@ const Nav = ({ active, setActive, data }) => {
           </Link>
           <Link href="/om-oss">
             <a
-              className="px-2 mx-1 hover:text-[#ccc]"
+              className="mx-3 hover:text-[#ccc]"
               style={
                 router.route === "/om-oss"
-                  ? { textDecoration: "underline" }
+                  ? { borderBottom: "2px solid #f37f04" }
                   : { textDecoration: "none" }
               }
             >
@@ -70,7 +70,7 @@ const Nav = ({ active, setActive, data }) => {
           </Link>
         </div>
         <Link href="/#form">
-          <button className="border-b-2 ml-10 text-left border-b-accent text-white drop-shadow tablet:block hidden">
+          <button className="border-b-2 ml-10 text-left border-b-accent text-white font-mono drop-shadow tablet:block hidden">
             Kontakt
           </button>
         </Link>

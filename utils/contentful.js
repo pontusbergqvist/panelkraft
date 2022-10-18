@@ -3,16 +3,9 @@ const contentful = require("contentful");
 export default class Contentful {
   constructor() {
     this.client = contentful.createClient({
-      // space: process.env.CONTENTFUL_SPACE_ID,
-      // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      space: "121t90qn9wcg",
-      accessToken: "N6iYAasFbal1TKrH5NhVFP8j1wAue2CN6H6X8F70hX4",
+      space: process.env.CONTENTFUL_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     });
-  }
-
-  testClient() {
-    console.log(process.env.CONTENTFUL_ACCESS_TOKEN);
-    console.log(process.env.CONTENTFUL_SPACE_ID);
   }
 
   async getAllPaths() {

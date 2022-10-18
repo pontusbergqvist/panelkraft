@@ -3,18 +3,37 @@ import Link from "next/link";
 const Footer = ({ data }) => {
   return (
     <>
-      <footer className="w-full bg-[#222] text-[#ccc] p-2 tablet:p-10">
+      <div className="w-full bg-[#f3f3f3] py-5">
+        <div className="flex justify-between items-center w-full max-w-[1000px] mx-auto">
+          <img
+            src={data.fields.footerLogo1.fields.file.url}
+            alt={data.fields.footerLogo1.fields.title}
+          />
+          <img
+            src={data.fields.footerLogo2.fields.file.url}
+            alt={data.fields.footerLogo2.fields.title}
+          />
+          <img
+            src={data.fields.footerLogo3.fields.file.url}
+            alt={data.fields.footerLogo3.fields.title}
+          />
+        </div>
+      </div>
+      <footer className="w-full bg-accent text-black p-2 tablet:p-10">
         <article className="max-w-[1000px] w-full h-full mx-auto flex flex-col justify-between tablet:flex-row">
           <section className="flex flex-col tablet:flex-row tablet:items-start items-center">
-            <div className="max-w-[300px] h-full flex flex-col tablet:mr-10 my-4 text-center">
+            <div className="max-w-[350px] h-full flex flex-col tablet:mr-10 my-4 text-center">
               <a href="index.html">
                 <img
-                  src={data.fields.storLogotyp.fields.file.url}
-                  alt={data.fields.storLogotyp.fields.title}
-                  className="w-full mb-5"
+                  src={`https:${data.fields.storLogotypFooter.fields.file.url}`}
+                  alt={data.fields.storLogotypFooter.fields.title}
+                  // layout="responsive"
+                  // height="100%"
+                  // width="100%"
+                  // objectFit="contain"
                 />
               </a>
-              <p className="text-left">{data.fields.slogan}</p>
+              <p className="text-left my-4">{data.fields.slogan}</p>
             </div>
             <div className="font-mono tracking-wider flex flex-col tablet:items-start items-center">
               <Link href="/">
@@ -32,8 +51,7 @@ const Footer = ({ data }) => {
             <div>
               <p>{data.fields.epost}</p>
               <p>{data.fields.telefonnummer}</p>
-            </div>
-            <div>
+              <br />
               <p>{data.fields.fretagsnamn}</p>
               <p>{data.fields.adress}</p>
               <p>{data.fields.postnummerOmrde}</p>
@@ -42,7 +60,7 @@ const Footer = ({ data }) => {
           </section>
         </article>
       </footer>
-      <p className="bg-[#222] text-[14px] text-center pt-10 pb-3 text-[#666]">
+      <p className="bg-accent text-[14px] text-center pt-10 pb-3 text-black">
         En del av MW El & Montage
         <br />
       </p>

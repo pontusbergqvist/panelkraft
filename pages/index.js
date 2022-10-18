@@ -1,3 +1,4 @@
+import Layout from "../components/layout";
 import Image from "next/image";
 import Form from "../components/form";
 import Contentful from "../utils/contentful";
@@ -5,18 +6,20 @@ import Contentful from "../utils/contentful";
 export const getStaticProps = async () => {
   const contentful = new Contentful();
   const data = await contentful.getHomePage();
+  const pageInfo = await contentful.getPageInfo();
 
   return {
     props: {
       data,
+      pageInfo,
     },
     revalidate: 10,
   };
 };
 
-export default function Home({ data }) {
+export default function Home({ data, pageInfo }) {
   return (
-    <>
+    <Layout data={pageInfo}>
       <article className="text-center my-28">
         <p className="text-[#222] font-light tracking-widest mb-4 font-mono">
           {data.fields.sektion1TextOvanfrRubrik}
@@ -243,6 +246,6 @@ export default function Home({ data }) {
           <Form />
         </div>
       </article>
-    </>
+    </Layout>
   );
 }

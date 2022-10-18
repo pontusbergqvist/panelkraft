@@ -11,9 +11,8 @@ module.exports = {
         h4: "16px",
       },
       fontFamily: {
-        mono: ["Dank Mono", "sans-serif"],
-        body: ["Tahoma", "sans-serif"],
-        serif: ["Cambria", "serif"],
+        mono: ["Montserrat", "sans-serif"],
+        body: ["Didact Gothic", "sans-serif"],
       },
       colors: {
         accent: "#f37f04",
