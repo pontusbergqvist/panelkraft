@@ -4,18 +4,21 @@ const Footer = ({ data }) => {
   return (
     <>
       <div className="w-full bg-[#f3f3f3] py-5">
-        <div className="flex justify-between items-center w-full max-w-[1000px] mx-auto">
+        <div className="flex flex-col tablet:flex-row justify-between items-center w-full max-w-[1000px] mx-auto px-1">
           <img
             src={data.fields.footerLogo1.fields.file.url}
             alt={data.fields.footerLogo1.fields.title}
+            className="my-2"
           />
           <img
             src={data.fields.footerLogo2.fields.file.url}
             alt={data.fields.footerLogo2.fields.title}
+            className="my-2"
           />
           <img
             src={data.fields.footerLogo3.fields.file.url}
             alt={data.fields.footerLogo3.fields.title}
+            className="my-2"
           />
         </div>
       </div>
@@ -27,10 +30,6 @@ const Footer = ({ data }) => {
                 <img
                   src={`https:${data.fields.storLogotypFooter.fields.file.url}`}
                   alt={data.fields.storLogotypFooter.fields.title}
-                  // layout="responsive"
-                  // height="100%"
-                  // width="100%"
-                  // objectFit="contain"
                 />
               </a>
               <p className="text-left my-4">{data.fields.slogan}</p>

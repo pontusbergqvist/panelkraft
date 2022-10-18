@@ -28,7 +28,7 @@ export default function Home({ data, pageInfo }) {
         <h2 className="tracking-wide text-h2 mb-14">
           {data.fields.sektion1Rubrik}
         </h2>
-        <section className="max-w-[500px] w-full mx-auto grid grid-cols-1 gap-10 place-content-center px-2 tablet:px-6 text-center tablet:text-left justify-center text-black">
+        <section className="max-w-[700px] w-full mx-auto grid grid-cols-1 gap-10 place-content-center px-2 tablet:px-6 text-center tablet:text-left justify-center text-black">
           <div className="text-center">
             <Image
               priority={true}
