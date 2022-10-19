@@ -1,10 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
 import Hamburger from "./hamburger";
 
 const Nav = ({ active, setActive, data }) => {
+  const [lowBatteryMode, setLowBatteryMode] = useState(false);
   const router = useRouter();
+  const video = useRef();
+
+  useEffect(() => {
+    video &&
+      video.current
+        .play()
+        .then(() => {
+          setLowBatteryMode(false);
+        })
+        .catch((err) => {
+          setLowBatteryMode(true);
+        });
+  }, []);
+
   return (
     <div
       className={`relative overflow-hidden w-screen h-screen bg-center before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-40 before:top-0 before:z-10 ${
@@ -13,12 +29,20 @@ const Nav = ({ active, setActive, data }) => {
     >
       <video
         src="/panelkraft.mov"
-        muted
         autoPlay
-        loop
+        muted
         playsInline
         className="min-w-full min-h-full object-cover"
+        ref={video}
+        style={lowBatteryMode ? { display: "none" } : { display: "block" }}
       ></video>
+      {lowBatteryMode && (
+        <img
+          src={`https:${data.fields.headerFallback.fields.file.url}`}
+          alt={data.fields.headerFallback.fields.title}
+          className="h-full object-cover"
+        />
+      )}
       <nav className="absolute top-0 left-1/2 text-lg -translate-x-1/2 flex justify-between items-center w-full max-w-[1000px] px-2 py-4 text-white z-20">
         <Link href="/">
           <a>
