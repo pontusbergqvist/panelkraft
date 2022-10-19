@@ -11,32 +11,31 @@ const form = async (req, res) => {
   } catch (error) {
     return res.status(400).json({
       status: "400 Bad request",
-      message: "Could not parse requst body",
+      message: "Could not parse request body",
     });
   }
   if (
     !body.name &&
     !body.email &&
     !body.phone &&
-    !body.veta &&
-    !body.boka &&
+    // !body.veta &&
+    // !body.boka &&
     !body.contactmail &&
-    !body.contactphone
+    !body.contactphone &&
+    !body.address
   ) {
     return res.status(400).json({
       status: "Bad request",
       message: "Form arguments missing in body",
     });
   } else {
-    const emailBody = `Avsändare: ${body.name}\r\nEpost: ${
-      body.email
-    }\r\nTelefonnummer: ${
-      body.phone
-    }\r\n\r\nVill bli kontaktad via: ${formatContact(
-      body
-    )}\r\n\r\nÖnskar att: ${formatVill(body)}\r\n\r\nMeddelande: ${
-      body.meddelande
-    }`;
+    const emailBody = `
+      Avsändare: ${body.name}\r\n
+      Epost: ${body.email}\r\n
+      Telefonnummer: ${body.phone}\r\n
+      Adress: ${body.address}\r\n
+      Vill bli kontaktad via: ${formatContact(body)}\r\n\r\n
+      Meddelande: ${body.meddelande}`;
 
     try {
       await mail.send({

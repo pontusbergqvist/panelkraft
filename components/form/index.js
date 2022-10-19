@@ -3,16 +3,17 @@ import FormBadRequest from "./formBadRequest";
 import Name from "./name";
 import Email from "./email";
 import Phone from "./phone";
-import Request from "./request";
+// import Request from "./request";
 import Contact from "./contact";
 import { useState } from "react";
+import Address from "./address";
 
 const Form = () => {
   const [formWasSent, setFormWasSent] = useState(false);
   const [formSuccess, setFormSuccess] = useState(true);
   const [isOk, setIsOk] = useState(true);
   const [contactIsValid, setContactIsValid] = useState(false);
-  const [requestIsValid, setRequestIsValid] = useState(false);
+  // const [requestIsValid, setRequestIsValid] = useState(false);
 
   const formHandler = async (e) => {
     e.preventDefault();
@@ -24,8 +25,9 @@ const Form = () => {
         body[input.name] = input.value;
       }
     });
-    if (contactIsValid && requestIsValid) {
+    if (contactIsValid) {
       setIsOk(true);
+      console.log(body);
       fetch("/api/form", {
         method: "post",
         body: JSON.stringify(body),
@@ -54,11 +56,12 @@ const Form = () => {
           <Name isOk={isOk} />
           <Email isOk={isOk} />
           <Phone isOk={isOk} />
-          <Request
+          <Address isOk={isOk} />
+          {/* <Request
             isOk={isOk}
             requestIsValid={requestIsValid}
             setRequestIsValid={setRequestIsValid}
-          />
+          /> */}
           <Contact
             isOk={isOk}
             contactIsValid={contactIsValid}
