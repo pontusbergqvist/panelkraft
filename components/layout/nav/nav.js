@@ -13,9 +13,7 @@ const Nav = ({ active, setActive, data }) => {
     video &&
       video.current
         .play()
-        .then(() => {
-          setLowBatteryMode(false);
-        })
+        .then(() => {})
         .catch((err) => {
           setLowBatteryMode(true);
         });
