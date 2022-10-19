@@ -1,12 +1,27 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Layout from "../components/layout";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  
+  const getTitle = (route) => {
+    if (route === '/') {
+      return "Hem";
+    } else if (route === '/om-oss') {
+      return "Om oss";
+    } else if (route.includes("/referenser")) {
+      return "Referenser"
+    } else {
+      return "";
+    }
+  }
+
   return (
     <>
       <Head>
+        <title>{`Panelkraft.nu - ${getTitle(router.route)}`}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
