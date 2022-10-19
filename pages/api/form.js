@@ -1,4 +1,4 @@
-import { formatVill, formatContact } from "../../utils/api/form";
+// import { formatVill, formatContact } from "../../utils/api/form";
 
 const mail = require("@sendgrid/mail");
 
@@ -14,16 +14,7 @@ const form = async (req, res) => {
       message: "Could not parse request body",
     });
   }
-  if (
-    !body.name &&
-    !body.email &&
-    !body.phone &&
-    // !body.veta &&
-    // !body.boka &&
-    !body.contactmail &&
-    !body.contactphone &&
-    !body.address
-  ) {
+  if (!body.name && !body.email && !body.phone && !body.address) {
     return res.status(400).json({
       status: "Bad request",
       message: "Form arguments missing in body",
@@ -34,7 +25,6 @@ const form = async (req, res) => {
       Epost: ${body.email}\r\n
       Telefonnummer: ${body.phone}\r\n
       Adress: ${body.address}\r\n
-      Vill bli kontaktad via: ${formatContact(body)}\r\n\r\n
       Meddelande: ${body.meddelande}`;
 
     try {

@@ -3,17 +3,17 @@ import FormBadRequest from "./formBadRequest";
 import Name from "./name";
 import Email from "./email";
 import Phone from "./phone";
-// import Request from "./request";
-import Contact from "./contact";
 import { useState } from "react";
 import Address from "./address";
 
 const Form = () => {
   const [formWasSent, setFormWasSent] = useState(false);
   const [formSuccess, setFormSuccess] = useState(true);
+  const [nameIsValid, setNameIsValid] = useState(false);
+  const [emailIsValid, setEmailIsValid] = useState(false);
+  const [phoneIsValid, setPhoneIsValid] = useState(false);
+  const [addressIsValid, setAddressIsValid] = useState(false);
   const [isOk, setIsOk] = useState(true);
-  const [contactIsValid, setContactIsValid] = useState(false);
-  // const [requestIsValid, setRequestIsValid] = useState(false);
 
   const formHandler = async (e) => {
     e.preventDefault();
@@ -25,9 +25,8 @@ const Form = () => {
         body[input.name] = input.value;
       }
     });
-    if (contactIsValid) {
+    if (nameIsValid && emailIsValid && phoneIsValid && addressIsValid) {
       setIsOk(true);
-      console.log(body);
       fetch("/api/form", {
         method: "post",
         body: JSON.stringify(body),
@@ -53,19 +52,25 @@ const Form = () => {
         style={formWasSent ? { display: "none" } : { display: "block" }}
       >
         <div className="max-w-[350px] w-full mx-auto">
-          <Name isOk={isOk} />
-          <Email isOk={isOk} />
-          <Phone isOk={isOk} />
-          <Address isOk={isOk} />
-          {/* <Request
+          <Name
             isOk={isOk}
-            requestIsValid={requestIsValid}
-            setRequestIsValid={setRequestIsValid}
-          /> */}
-          <Contact
+            nameIsValid={nameIsValid}
+            setNameIsValid={setNameIsValid}
+          />
+          <Email
             isOk={isOk}
-            contactIsValid={contactIsValid}
-            setContactIsValid={setContactIsValid}
+            emailIsValid={emailIsValid}
+            setEmailIsValid={setEmailIsValid}
+          />
+          <Phone
+            isOk={isOk}
+            phoneIsValid={phoneIsValid}
+            setPhoneIsValid={setPhoneIsValid}
+          />
+          <Address
+            isOk={isOk}
+            addressIsValid={addressIsValid}
+            setAddressIsValid={setAddressIsValid}
           />
           <textarea
             name="meddelande"

@@ -1,7 +1,7 @@
 import { FcOk, FcCancel } from "react-icons/fc";
 import { useEffect, useState } from "react";
 
-const Email = ({ isOk }) => {
+const Email = ({ isOk, setEmailIsValid }) => {
   const [value, setValue] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -13,6 +13,14 @@ const Email = ({ isOk }) => {
       ? setIsValid(true)
       : setIsValid(false);
   }, [value]);
+
+  useEffect(() => {
+    if (isValid) {
+      setEmailIsValid(true);
+    } else {
+      setEmailIsValid(false);
+    }
+  }, [isValid]);
 
   return (
     <div className="block text-left my-5">

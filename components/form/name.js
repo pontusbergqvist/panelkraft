@@ -1,7 +1,7 @@
 import { FcOk, FcCancel } from "react-icons/fc";
 import { useState, useEffect } from "react";
 
-const Name = ({ isOk }) => {
+const Name = ({ isOk, setNameIsValid }) => {
   const [value, setValue] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -9,6 +9,14 @@ const Name = ({ isOk }) => {
   useEffect(() => {
     /[a-zA-Z]+\s+[a-zA-Z]+/g.test(value) ? setIsValid(true) : setIsValid(false);
   }, [value]);
+
+  useEffect(() => {
+    if (isValid) {
+      setNameIsValid(true);
+    } else {
+      setNameIsValid(false);
+    }
+  }, [isValid]);
 
   return (
     <div className="block text-left my-5">

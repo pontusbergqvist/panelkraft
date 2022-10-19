@@ -1,7 +1,7 @@
 import { FcOk, FcCancel } from "react-icons/fc";
 import { useState, useEffect } from "react";
 
-const Address = ({ isOk }) => {
+const Address = ({ isOk, setAddressIsValid }) => {
   const [value, setValue] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -9,6 +9,14 @@ const Address = ({ isOk }) => {
   useEffect(() => {
     value.length >= 1 ? setIsValid(true) : setIsValid(false);
   }, [value]);
+
+  useEffect(() => {
+    if (isValid) {
+      setAddressIsValid(true);
+    } else {
+      setAddressIsValid(false);
+    }
+  }, [isValid]);
 
   return (
     <div className="block text-left my-5">

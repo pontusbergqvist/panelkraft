@@ -5,9 +5,7 @@ const FormSuccess = () => {
     <div className="my-10">
       <div className="text-[40px] flex flex-col items-center">
         <FcCheckmark />
-        <p className="text-[18px] mt-5">
-          Vi har tagit emot din anmälan! Tack för ditt intresse.
-        </p>
+        <p className="text-[18px] mt-5">Tack! Vi hör av oss till er snarast.</p>
       </div>
     </div>
   );
