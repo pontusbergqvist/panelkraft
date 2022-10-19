@@ -9,15 +9,15 @@ const Nav = ({ active, setActive, data }) => {
   const router = useRouter();
   const video = useRef();
 
-  useEffect(() => {
-    video &&
-      video.current
-        .play()
-        .then(() => {})
-        .catch((err) => {
-          setLowBatteryMode(true);
-        });
-  }, []);
+  // useEffect(() => {
+  //   video &&
+  //     video.current
+  //       .play()
+  //       .then(() => {})
+  //       .catch((err) => {
+  //         setLowBatteryMode(true);
+  //       });
+  // }, []);
 
   return (
     <div
