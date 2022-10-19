@@ -32,6 +32,7 @@ const Nav = ({ active, setActive, data }) => {
         autoPlay
         muted
         playsInline
+        loop
         className="min-w-full min-h-full object-cover"
         ref={video}
         style={lowBatteryMode ? { display: "none" } : { display: "block" }}
