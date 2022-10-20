@@ -9,15 +9,22 @@ const Nav = ({ active, setActive, data }) => {
   const router = useRouter();
   const video = useRef();
 
-  // useEffect(() => {
-  //   video &&
-  //     video.current
-  //       .play()
-  //       .then(() => {})
-  //       .catch((err) => {
-  //         setLowBatteryMode(true);
-  //       });
-  // }, []);
+  console.log(video.current.paused);
+
+  useEffect(() => {
+    // video &&
+    //   video.current
+    //     .play()
+    //     .then(() => {})
+    //     .catch((err) => {
+    //       setLowBatteryMode(true);
+    //     });
+    if (video.current.paused) {
+      setLowBatteryMode(true);
+    } else {
+      setLowBatteryMode(false);
+    }
+  }, []);
 
   // before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-40 before:top-0 before:z-10
 
