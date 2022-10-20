@@ -9,8 +9,6 @@ const Nav = ({ active, setActive, data }) => {
   const router = useRouter();
   const video = useRef();
 
-  console.log(video.current.paused);
-
   useEffect(() => {
     // video &&
     //   video.current
