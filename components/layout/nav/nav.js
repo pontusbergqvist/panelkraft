@@ -31,7 +31,6 @@ const Nav = ({ active, setActive, data }) => {
         src="/panelkraft.mov"
         autoPlay
         muted
-        controls
         playsInline
         loop
         className="min-w-full min-h-full object-cover"
