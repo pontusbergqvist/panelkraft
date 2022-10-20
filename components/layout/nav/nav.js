@@ -19,6 +19,8 @@ const Nav = ({ active, setActive, data }) => {
   //       });
   // }, []);
 
+  // before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-40 before:top-0 before:z-10
+
   return (
     <div
       className={`relative overflow-hidden w-screen h-screen bg-center before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-40 before:top-0 before:z-10 ${
@@ -29,6 +31,7 @@ const Nav = ({ active, setActive, data }) => {
         src="/panelkraft.mov"
         autoPlay
         muted
+        controls
         playsInline
         loop
         className="min-w-full min-h-full object-cover"
