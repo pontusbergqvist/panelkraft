@@ -145,12 +145,13 @@ video::-webkit-media-controls-current-time-display,
 video::-webkit-media-controls-time-remaining-display,
 video::-webkit-media-controls-mute-button, 
 video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-volume-slider {
-    display: none;
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
 }
 
 video::-webkit-media-controls {
-    display: none;
+    display: none !important;
 }
 
 @media screen and (min-width: 1000px) {
