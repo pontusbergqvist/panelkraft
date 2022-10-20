@@ -148,10 +148,13 @@ video::-webkit-media-controls-toggle-closed-captions-button,
 video::-webkit-media-controls-volume-slider,
 video::-webkit-media-controls-start-playback-button {
     display: none !important;
+    -webkit-appearance: none;
+    
 }
 
 video::-webkit-media-controls {
     display: none !important;
+    -webkit-appearance: none;
 }
 
 @media screen and (min-width: 1000px) {
