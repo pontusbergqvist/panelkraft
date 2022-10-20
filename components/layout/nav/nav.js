@@ -19,7 +19,7 @@ const Nav = ({ active, setActive, data }) => {
     //     .catch((err) => {
     //       setLowBatteryMode(true);
     //     });
-    if (video.current.paused) {
+    if (video && video.current.paused) {
       setLowBatteryMode(true);
     } else {
       setLowBatteryMode(false);
