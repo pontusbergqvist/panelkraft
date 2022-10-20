@@ -101,9 +101,10 @@ const Referens = ({ referens, pageInfo }) => {
                 </p>
                 <p className="my-3">Tillval:</p>
                 <ul className="mx-3">
-                  {referens.addons.map((addon, index) => (
-                    <li key={index}>&gt; {addon}</li>
-                  ))}
+                  {referens.addons &&
+                    referens.addons.map((addon, index) => (
+                      <li key={index}>&gt; {addon}</li>
+                    ))}
                 </ul>
               </div>
             </section>

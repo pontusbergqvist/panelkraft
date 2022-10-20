@@ -30,7 +30,6 @@ export default class Contentful {
       // throw new Error(`Could not find any entries using slug ${omrade}`);
     } else {
       const {
-        addons,
         address,
         comment,
         description,
@@ -42,7 +41,9 @@ export default class Contentful {
         thumbnail,
       } = referens.fields;
       return {
-        addons,
+        ...(referens.fields.addons && {
+          addons: referens.fields.addons,
+        }),
         address,
         comment,
         description,
@@ -62,7 +63,6 @@ export default class Contentful {
     });
     return collection.items.map((entry) => {
       const {
-        addons,
         address,
         comment,
         description,
@@ -74,7 +74,9 @@ export default class Contentful {
         thumbnail,
       } = entry.fields;
       return {
-        addons,
+        ...(entry.fields.addons && {
+          addons: referens.fields.addons,
+        }),
         address,
         comment,
         description,
