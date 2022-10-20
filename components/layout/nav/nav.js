@@ -22,6 +22,9 @@ const Nav = ({ active, setActive, data }) => {
     // } else {
     //   setLowBatteryMode(false);
     // }
+    if (video.current) {
+      video.current.play();
+    }
   }, []);
 
   // before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-40 before:top-0 before:z-10
@@ -42,7 +45,6 @@ const Nav = ({ active, setActive, data }) => {
     >
       <video
         src="/panelkraft.mov"
-        autoPlay
         muted
         playsInline
         loop

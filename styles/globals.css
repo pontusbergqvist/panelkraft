@@ -138,7 +138,7 @@
     fill: #f37f04;
 }
 
-video::-webkit-media-controls-play-button,
+/* video::-webkit-media-controls-play-button,
 video::-webkit-media-controls-fullscreen-button,
 video::-webkit-media-controls-timeline,
 video::-webkit-media-controls-current-time-display,
@@ -155,7 +155,7 @@ video::-webkit-media-controls-start-playback-button {
 video::-webkit-media-controls {
     display: none !important;
     -webkit-appearance: none;
-}
+} */
 
 @media screen and (min-width: 1000px) {
     .image-gallery img {
