@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const Footer = ({ data }) => {
-  console.log(data);
   return (
     <>
       <div className="w-full bg-[#f3f3f3] py-5">
