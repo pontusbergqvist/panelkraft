@@ -75,7 +75,7 @@ export default class Contentful {
       } = entry.fields;
       return {
         ...(entry.fields.addons && {
-          addons: referens.fields.addons,
+          addons: entry.fields.addons,
         }),
         address,
         comment,
