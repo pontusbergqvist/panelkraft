@@ -17,22 +17,7 @@ const Nav = ({ active, setActive, data }) => {
         .catch((err) => {
           setLowBatteryMode(true);
         });
-    // if (video.current && video.current.paused) {
-    //   setLowBatteryMode(true);
-    // } else {
-    //   setLowBatteryMode(false);
-    // }
   }, []);
-
-  // before:content-[''] before:h-full before:w-full before:block before:absolute before:bg-black before:opacity-40 before:top-0 before:z-10
-
-  // const checkForBatteryMode = (event) => {
-  //   if (event.nativeEvent.srcElement.paused) {
-  //     setLowBatteryMode(true);
-  //   } else {
-  //     setLowBatteryMode(false);
-  //   }
-  // };
 
   return (
     <div
@@ -47,7 +32,6 @@ const Nav = ({ active, setActive, data }) => {
         loop
         className="min-w-full min-h-full object-cover"
         ref={video}
-        // onSuspend={(e) => checkForBatteryMode(e)}
         style={lowBatteryMode ? { display: "none" } : { display: "block" }}
       ></video>
       {lowBatteryMode && (

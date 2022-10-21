@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 const Footer = ({ data }) => {
+  console.log(data);
   return (
     <>
       <div className="w-full bg-[#f3f3f3] py-5">
-        <div className="flex flex-col tablet:flex-row justify-between items-center w-full max-w-[1000px] mx-auto px-1">
+        <div className="grid grid-cols-3 gap-5 w-full max-w-[1000px] mx-auto px-1">
           <img
             src={data.fields.footerLogo1.fields.file.url}
             alt={data.fields.footerLogo1.fields.title}
