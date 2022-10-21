@@ -1,3 +1,4 @@
+import Head from "next/head";
 import OmOssSection from "../components/omOssSection";
 import BliKund from "../components/referenser/bliKund";
 import Contentful from "../utils/contentful";
@@ -19,10 +20,18 @@ export const getStaticProps = async () => {
 
 const OmOss = ({ data, pageInfo }) => {
   return (
-    <Layout data={pageInfo}>
-      <OmOssSection data={data} />
-      <BliKund />
-    </Layout>
+    <>
+      <Head>
+        <link
+          rel="shortcut icon"
+          href={`https:${pageInfo.fields.litenLogotyp.fields.file.url}`}
+        />
+      </Head>
+      <Layout data={pageInfo}>
+        <OmOssSection data={data} />
+        <BliKund />
+      </Layout>
+    </>
   );
 };
 
