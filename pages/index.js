@@ -45,7 +45,7 @@ export default function Home({ data, pageInfo }) {
                 height="60%"
                 width="100%"
                 layout="responsive"
-                objectFit="contain"
+                objectFit="cover"
               />
               <h3 className="text-h3 mb-2">{data.fields.cell1Rubrik}</h3>
               <p className="text-[#222]">{data.fields.sektion1Cell1}</p>
@@ -58,7 +58,7 @@ export default function Home({ data, pageInfo }) {
                 height="60%"
                 width="100%"
                 layout="responsive"
-                objectFit="contain"
+                objectFit="cover"
               />
               <h3 className="text-h3 mb-2">{data.fields.cell2Rubrik}</h3>
               <p className="text-[#222]">{data.fields.sektion1Cell2}</p>
@@ -71,7 +71,7 @@ export default function Home({ data, pageInfo }) {
                 height="60%"
                 width="100%"
                 layout="responsive"
-                objectFit="contain"
+                objectFit="cover"
               />
               <h3 className="text-h3 mb-2">{data.fields.cell3Rubrik}</h3>
               <p className="text-[#222]">{data.fields.sektion1Cell3}</p>
@@ -84,7 +84,7 @@ export default function Home({ data, pageInfo }) {
                 height="60%"
                 width="100%"
                 layout="responsive"
-                objectFit="contain"
+                objectFit="cover"
               />
               <h3 className="text-h3 mb-2">{data.fields.cell4Rubrik}</h3>
               <p className="text-[#222]">{data.fields.sektion1Cell4}</p>
@@ -97,7 +97,7 @@ export default function Home({ data, pageInfo }) {
                 height="60%"
                 width="100%"
                 layout="responsive"
-                objectFit="contain"
+                objectFit="cover"
               />
               <h3 className="text-h3 mb-2">{data.fields.cell5Rubrik}</h3>
               <p className="text-[#222]">{data.fields.sektion1Cell5}</p>
