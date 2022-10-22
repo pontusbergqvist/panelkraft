@@ -26,6 +26,7 @@ const Gallery = ({ setOpenGallery, image, setImage, images }) => {
       : setImage(images[index - 1].sys.id);
   };
 
+  console.log(getCurrentImage(image));
   const setNextImage = () => {
     const index = images.findIndex((el) => el.sys.id === image);
     index === images.length - 1
@@ -59,8 +60,8 @@ const Gallery = ({ setOpenGallery, image, setImage, images }) => {
         </div>
         <img
           src={image && `https:${getCurrentImage(image).fields.file.url}`}
-          alt="Djupedalsäng"
-          className="mx-auto"
+          alt={image && getCurrentImage(image).fields.title}
+          className="mx-auto max-h-[90vh]"
         />
         <div
           className="fixed top-1/2 -translate-y-1/2 right-0 h-full w-1/4 flex items-center justify-end px-5 cursor-pointer select-none opacity-50"
