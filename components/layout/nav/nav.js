@@ -114,7 +114,7 @@ const Nav = ({ active, setActive, data }) => {
             {data.fields.slogan}
           </p>
           <Link href="/#form">
-            <button className="border text-white border-accent drop-shadow rounded p-2 px-3 hidden tablet:block">
+            <button className="border text-white border-accent drop-shadow rounded p-2 px-3">
               Kontakta oss
             </button>
           </Link>

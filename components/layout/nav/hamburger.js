@@ -42,9 +42,6 @@ const Hamburger = ({ active, setActive, black }) => {
           <Link href="/om-oss">
             <li className="pl-16 my-2 pr-2">Om oss</li>
           </Link>
-          <Link href="/#form">
-            <li className="pl-16 my-2 pr-2 text-accent">Kontakt</li>
-          </Link>
         </ul>
       ) : (
         <></>
