@@ -13,7 +13,7 @@ const Footer = ({ data }) => {
           <img
             src={data.fields.footerLogo2.fields.file.url}
             alt={data.fields.footerLogo2.fields.title}
-            className="my-2 justify-self-center"
+            className="my-2 justify-self-center max-w-full"
           />
           <img
             src={data.fields.footerLogo3.fields.file.url}
