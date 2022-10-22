@@ -4,21 +4,21 @@ const Footer = ({ data }) => {
   return (
     <>
       <div className="w-full bg-[#f3f3f3] py-5">
-        <div className="grid grid-cols-3 gap-5 w-full max-w-[1000px] mx-auto px-1">
+        <div className="grid grid-cols-1 tablet:grid-cols-3 items-center gap-5 w-full max-w-[1000px] mx-auto px-1">
           <img
             src={data.fields.footerLogo1.fields.file.url}
             alt={data.fields.footerLogo1.fields.title}
-            className="my-2"
+            className="my-2 justify-self-center"
           />
           <img
             src={data.fields.footerLogo2.fields.file.url}
             alt={data.fields.footerLogo2.fields.title}
-            className="my-2"
+            className="my-2 justify-self-center"
           />
           <img
             src={data.fields.footerLogo3.fields.file.url}
             alt={data.fields.footerLogo3.fields.title}
-            className="my-2"
+            className="my-2 justify-self-center"
           />
         </div>
       </div>
