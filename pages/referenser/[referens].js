@@ -11,7 +11,7 @@ export const getStaticPaths = async () => {
   const paths = await contentful.getAllPaths();
   return {
     paths,
-    fallback: false,
+    fallback: "blocking",
   };
 };
 
