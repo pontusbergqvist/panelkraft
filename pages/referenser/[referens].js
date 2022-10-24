@@ -107,7 +107,7 @@ const Referens = ({ referens, pageInfo }) => {
                   </p>
                   <p className="my-3">Fabrikat: {referens.manufacturer}</p>
                   <p className="my-3">
-                    Uppskattad genererad effekt: {referens.energy}kW
+                    Installerad effekt: {referens.energy}kW
                   </p>
                   <p className="my-3">Tillval:</p>
                   <ul className="mx-3">
