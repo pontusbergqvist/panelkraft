@@ -36,6 +36,8 @@ const Referens = ({ referens, pageInfo }) => {
     setOpenGallery(true);
   };
 
+  console.log(referens.comment);
+
   return (
     <>
       <Head>

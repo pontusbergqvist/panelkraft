@@ -44,7 +44,7 @@ export default class Contentful {
           addons: referens.fields.addons,
         }),
         ...(referens.fields.comment && {
-          comment: entry.fields.comment,
+          comment: referens.fields.comment,
         }),
         address,
         description,
