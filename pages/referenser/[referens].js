@@ -85,8 +85,10 @@ const Referens = ({ referens, pageInfo }) => {
               </p> */}
             </header>
             <main className="my-10 text-center max-w-[1200px] w-full mx-auto p-2">
-              {referens.comment && (
+              {referens.comment ? (
                 <q className="text-h3 italic block">{referens.comment}</q>
+              ) : (
+                <div></div>
               )}
               <section className="text-left my-10 flex flex-col items-center desktop:flex-row justify-between">
                 <div className="desktop:max-w-[500px] self-start w-full">
