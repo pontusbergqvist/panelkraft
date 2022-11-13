@@ -31,7 +31,6 @@ export default class Contentful {
     } else {
       const {
         address,
-        comment,
         description,
         energy,
         images,
@@ -44,8 +43,10 @@ export default class Contentful {
         ...(referens.fields.addons && {
           addons: referens.fields.addons,
         }),
+        ...(referens.fields.comment && {
+          comment: entry.fields.comment,
+        }),
         address,
-        comment,
         description,
         energy,
         images,
@@ -64,7 +65,6 @@ export default class Contentful {
     return collection.items.map((entry) => {
       const {
         address,
-        comment,
         description,
         energy,
         images,
@@ -77,8 +77,10 @@ export default class Contentful {
         ...(entry.fields.addons && {
           addons: entry.fields.addons,
         }),
+        ...(entry.fields.comment && {
+          comment: entry.fields.comment,
+        }),
         address,
-        comment,
         description,
         energy,
         images,
